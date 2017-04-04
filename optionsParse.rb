@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#! /usr/bin/env ruby
 require 'optparse'
 
 class OptParser
@@ -15,26 +15,27 @@ class OptParser
     end
   
     def get_username(parser)
-      parser.on('-u, --username') do |u|
+      parser.on('-u, --username USERNAME') do |u|
         self.username = u
       end
     end
     
     def get_function(parser)
-      parser.on('-f, --function') do |f|
+      parser.on('-f, --function FUNCTION') do |f|
         self.function = f
       end
     end
     
     def get_hostnames(parser)
-      parser.on('-c, --hostnames', Array) do |h|
+      parser.on('-c, --hostnames HOSTNAMES', Array) do |h|
         self.hostnames = h
       end
     end
     
     def get_help(parser)
       parser.on('-h', "--help", "Prints help") do
-        puts@options
+        puts @options
+        exit
       end
     end
     
