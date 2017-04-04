@@ -5,11 +5,11 @@ require 'colorize'
 require 'net/ssh'
 
 class SSHTool
-  
   def initialize(options)
     o = OptParser.new().parse(options)
     @username, @function, @hostnames = o.values_at(:username, :function, :hostnames)
     parse
+    puts "All done...\n".colorize(:cyan)
   end
   
   def parse
