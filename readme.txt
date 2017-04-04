@@ -1,4 +1,4 @@
-ssh tool v0.0.4
+ssh tool v0.0.5
 Usage: ruby sshtool.rb [options]
 
 Required options:
